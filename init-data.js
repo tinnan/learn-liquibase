@@ -1,8 +1,23 @@
-db = connect("mongodb://localhost/product");
+db = connect("mongodb://localhost/admin");
+
+db.createUser({
+    user: "productadmin",
+    pwd: "adminpwd",
+    roles: [
+        {
+            role: "dbAdmin",
+            db: "product"
+        },
+        {
+            role: "readWrite",
+            db: "product"
+        }
+    ]
+});
 
 db.createUser({
     user: "productuser",
-    pwd: "productpwd",
+    pwd: "userpwd",
     roles: [
         {
             role: "readWrite",

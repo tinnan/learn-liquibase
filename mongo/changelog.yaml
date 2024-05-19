@@ -6,7 +6,7 @@ databaseChangeLog:
       tagDatabase:
         tag: "start-release"
   - include:
-      file: "/product/product_catalog/product_catalog_changeset_0001.yaml"
+      file: "/product/product_catalog/product_catalog_changeset_0001.json"
       relativeToChangelogFile: true
   - changeSet:
       id: "end-release"

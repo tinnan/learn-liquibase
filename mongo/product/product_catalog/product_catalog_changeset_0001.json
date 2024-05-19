@@ -1,0 +1,52 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "0001-new-collection",
+        "author": "Tin N.",
+        "description": "Create product_catalog collection",
+        "changes": [
+          {
+            "createCollection": {
+              "collectionName": "product_catalog",
+              "options": {
+                "$rawJson": {
+                  "validationAction": "error",
+                  "validationLevel": "strict",
+                  "validator": {
+                    "$jsonSchema": {
+                      "bsonType": "object",
+                      "required": [
+                        "code",
+                        "name",
+                        "description",
+                        "image_ids"
+                      ],
+                      "properties": {
+                        "code": {
+                          "bsonType": "string"
+                        },
+                        "name": {
+                          "bsonType": "string"
+                        },
+                        "description": {
+                          "bsonType": "string"
+                        },
+                        "image_ids": {
+                          "bsonType": "array",
+                          "items": {
+                            "bsonType": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
