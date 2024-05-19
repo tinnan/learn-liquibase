@@ -5,12 +5,27 @@ databaseChangeLog:
       runAlways: true
       tagDatabase:
         tag: "start-release"
+  - changeSet:
+      id: "update_0000"
+      author: "Tin N."
+      tagDatabase:
+        tag: "update_0000"
   - include:
       file: "/product/product_catalog/product_catalog_changeset_0001.json"
       relativeToChangelogFile: true
+  - changeSet:
+      id: "update_0001"
+      author: "Tin N."
+      tagDatabase:
+        tag: "update_0001"
   - include:
       file: "/product/product_catalog/product_catalog_changeset_0002.json"
       relativeToChangelogFile: true
+  - changeSet:
+      id: "update_0002"
+      author: "Tin N."
+      tagDatabase:
+        tag: "update_0002"
   - changeSet:
       id: "end-release"
       author: "Tin N."

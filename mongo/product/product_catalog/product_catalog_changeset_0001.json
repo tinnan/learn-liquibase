@@ -45,6 +45,13 @@
               }
             }
           }
+        ],
+        "rollback": [
+          {
+            "dropCollection": {
+              "collectionName": "product_catalog"
+            }
+          }
         ]
       }
     }

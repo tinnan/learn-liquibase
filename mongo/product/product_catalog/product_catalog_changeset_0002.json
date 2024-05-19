@@ -21,6 +21,18 @@
               }
             }
           }
+        ],
+        "rollback": [
+          {
+            "dropIndex": {
+              "collectionName": "product_catalog",
+              "keys": {
+                "$rawJson": {
+                  "code": 1
+                }
+              }
+            }
+          }
         ]
       }
     }
