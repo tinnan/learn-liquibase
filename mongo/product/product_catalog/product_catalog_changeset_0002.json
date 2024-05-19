@@ -1,0 +1,28 @@
+{
+  "databaseChangeLog": [
+    {
+      "changeSet": {
+        "id": "0002-create-product-catalog-index",
+        "author": "Tin N.",
+        "description": "Create product_catalog index",
+        "changes": [
+          {
+            "createIndex": {
+              "collectionName": "product_catalog",
+              "keys": {
+                "$rawJson": {
+                  "code": 1
+                }
+              },
+              "options": {
+                "$rawJson": {
+                  "name": "product_catalog_code_1"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -8,6 +8,9 @@ databaseChangeLog:
   - include:
       file: "/product/product_catalog/product_catalog_changeset_0001.json"
       relativeToChangelogFile: true
+  - include:
+      file: "/product/product_catalog/product_catalog_changeset_0002.json"
+      relativeToChangelogFile: true
   - changeSet:
       id: "end-release"
       author: "Tin N."
