@@ -1,0 +1,16 @@
+databaseChangeLog:
+  - changeSet:
+      id: "start-release"
+      author: "Tin N."
+      runAlways: true
+      tagDatabase:
+        tag: "start-release"
+  - include:
+      file: "/product/product_catalog/product_catalog_changeset_0001.yaml"
+      relativeToChangelogFile: true
+  - changeSet:
+      id: "end-release"
+      author: "Tin N."
+      runAlways: true
+      tagDatabase:
+        tag: "start-release"
