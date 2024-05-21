@@ -16,7 +16,7 @@
               },
               "options": {
                 "$rawJson": {
-                  "name": "product_catalog_code_1"
+                  "name": "product_catalog_ix"
                 }
               }
             }
@@ -24,13 +24,8 @@
         ],
         "rollback": [
           {
-            "dropIndex": {
-              "collectionName": "product_catalog",
-              "keys": {
-                "$rawJson": {
-                  "code": 1
-                }
-              }
+            "runCommand": {
+              "command": "{ dropIndexes: 'product_catalog', index: 'product_catalog_ix' }"
             }
           }
         ]
